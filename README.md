@@ -1,5 +1,9 @@
 # php-travis-encrypter
 
+[![StyleCI](https://styleci.io/repos/109020662/shield?branch=master)](https://styleci.io/repos/109020662)
+[![Coverage Status](https://coveralls.io/repos/github/peter279k/php-travis-encrypter/badge.svg?branch=master)](https://coveralls.io/github/peter279k/php-travis-encrypter?branch=master)
+[![Build Status](https://travis-ci.org/peter279k/php-travis-encrypter.svg?branch=master)](https://travis-ci.org/peter279k/php-travis-encrypter)
+
 ## Introduction
 
 The PHP API wrapper is to encrypt the travis-ci environment variables.
