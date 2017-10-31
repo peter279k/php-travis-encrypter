@@ -1,0 +1,33 @@
+{
+    "name": "lee/php-travis-encrypter",
+    "description": "The PHP wrapper generating travis-encrypted environment variables",
+    "type": "library",
+    "require": {
+        "php": ">=5.4.0",
+        "guzzlehttp/guzzle": "~6.0|~5.3",
+        "ext-openssl": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.8",
+        "php-coveralls/php-coveralls": "^1.0",
+        "ext-openssl": "*"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "peter279k",
+            "email": "peter279k@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Travis\\Encrypter\\": "src/Travis/Encrypter"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Travis\\EncrypterTest\\": "tests/Travis/EncrypterTest"
+        }
+    }
+}
