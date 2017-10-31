@@ -32,7 +32,7 @@ class Encrypter {
     }
 
     /**
-     * Encrypt the environment variable by the Travis Encrypter class
+     * Encrypt the environment variable is by the Travis Encrypter class
      * @param string $envName  actual environment name
      * @param string $envValue actual environment value
      * @return string $result

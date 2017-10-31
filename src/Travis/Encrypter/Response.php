@@ -23,7 +23,7 @@ class Response {
 
     /**
      * Construct a Travis Encrypter response
-     * @param Request        $request  Travis Encrypter actual request
+     * @param Request           $request  Travis Encrypter actual request
      * @param ResponseInterface $response Guzzle response
      */
     public function __construct($request, $response) {
