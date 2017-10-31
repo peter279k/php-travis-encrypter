@@ -14,8 +14,8 @@ namespace Travis\Encrypter;
 
 use phpseclib\Crypt\RSA;
 
-class Encrypter {
-
+class Encrypter
+{
     private $key;
     private $envName;
     private $envValue;
@@ -25,7 +25,8 @@ class Encrypter {
      * @param string $envName  actual environment name
      * @param string $envValue actual environment value
      */
-    public function __construct($key, $envName, $envValue) {
+    public function __construct($key, $envName, $envValue)
+    {
         $this->key = $key;
         $this->envName = $envName;
         $this->envValue = $envValue;
@@ -37,7 +38,8 @@ class Encrypter {
      * @param string $envValue actual environment value
      * @return string $result
      */
-    public function encrypt() {
+    public function encrypt()
+    {
         openssl_public_encrypt($this->envName.'='.$this->envValue, $result, $this->key);
         return base64_encode($result);
     }

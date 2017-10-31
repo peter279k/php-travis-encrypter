@@ -12,8 +12,8 @@
 
 namespace Travis\Encrypter;
 
-class Client {
-
+class Client
+{
     const WRAPPER_VERSION = Config::WRAPPER_VERSION;
 
     private $repoName;
@@ -25,7 +25,8 @@ class Client {
      * @param string $repoName  the specified repository name
      * @param boolean $call     whether the call is to do the HTTP request
      */
-    public function __construct($repoName, $call = true) {
+    public function __construct($repoName, $call = true)
+    {
         $this->repoName = $repoName;
         $this->call = $call;
     }
@@ -34,7 +35,8 @@ class Client {
      * Trigger a GET request
      * @return Response
      */
-    public function get() {
+    public function get()
+    {
         $result = $this->_call('GET', $this->buildURL(), '', Config::CONTENT_TYPE);
         return $result;
     }
@@ -47,7 +49,8 @@ class Client {
      * @param string $type    Request Content-type
      * @return Response server response
      */
-    private function _call($method, $url, $body, $type) {
+    private function _call($method, $url, $body, $type)
+    {
         $url = $this->buildURL();
         $request = new Request($method, $url, $body, $type);
         return $request->call($this->call);
@@ -58,7 +61,8 @@ class Client {
      * or not
      * @return string the API url;
      */
-    private function getApiUrl() {
+    private function getApiUrl()
+    {
         return $this->secured ? 'https://'.Config::MAIN_URL:'http://'.Config::MAIN_URL;
     }
 
@@ -66,7 +70,8 @@ class Client {
      * Build the final call url without query strings
      * @return string final call url
      */
-    private function buildURL() {
+    private function buildURL()
+    {
         return $this->getApiUrl().'/repos/'.$this->repoName.'/key';
     }
 }

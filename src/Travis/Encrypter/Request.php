@@ -16,8 +16,8 @@ use GuzzleHttp\Client as GuzzleClient;
 use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\Exception\ServerException;
 
-class Request extends GuzzleClient {
-
+class Request extends GuzzleClient
+{
     private $method;
     private $body;
     private $url;
@@ -30,7 +30,8 @@ class Request extends GuzzleClient {
      * @param array  $body    Mailjet resource body
      * @param string $type    Request Content-type
      */
-    public function __construct($method, $url, $body, $type = 'application/json') {
+    public function __construct($method, $url, $body, $type = 'application/json')
+    {
         parent::__construct([
             'defaults' => [
                 'headers' => [
@@ -45,12 +46,13 @@ class Request extends GuzzleClient {
         $this->type = $type;
     }
 
-     /**
-     * Trigger the actual call
-     * @param $call
-     * @return Response the call response
-     */
-    public function call($call) {
+    /**
+    * Trigger the actual call
+    * @param $call
+    * @return Response the call response
+    */
+    public function call($call)
+    {
         $payload = [
             'headers' => ['content-type' => $this->type],
         ];
@@ -69,11 +71,12 @@ class Request extends GuzzleClient {
         return new Response($this, $response);
     }
 
-   /**
-     * Http method getter
-     * @return string Request method
-     */
-    public function getMethod() {
+    /**
+      * Http method getter
+      * @return string Request method
+      */
+    public function getMethod()
+    {
         return $this->method;
     }
 
@@ -81,7 +84,8 @@ class Request extends GuzzleClient {
      * Call Url getter
      * @return string Request Url
      */
-    public function getUrl() {
+    public function getUrl()
+    {
         return $this->url;
     }
 
@@ -89,7 +93,8 @@ class Request extends GuzzleClient {
      * Request body getter
      * @return array request body
      */
-    public function getBody() {
+    public function getBody()
+    {
         return $this->body;
     }
 }

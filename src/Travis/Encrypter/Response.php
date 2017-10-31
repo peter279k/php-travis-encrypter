@@ -14,8 +14,8 @@ namespace Travis\Encrypter;
 
 use Psr\Http\Message\ResponseInterface;
 
-class Response {
-
+class Response
+{
     private $status;
     private $success;
     private $body;
@@ -26,7 +26,8 @@ class Response {
      * @param Request           $request  Travis Encrypter actual request
      * @param ResponseInterface $response Guzzle response
      */
-    public function __construct($request, $response) {
+    public function __construct($request, $response)
+    {
         $this->request = $request;
 
         if ($response) {
@@ -42,7 +43,8 @@ class Response {
      * return the http status code
      * @return int status
      */
-    public function getStatus() {
+    public function getStatus()
+    {
         return $this->status;
     }
 
@@ -51,7 +53,8 @@ class Response {
      * return the entire response array
      * @return array
      */
-    public function getBody() {
+    public function getBody()
+    {
         return $this->body;
     }
 
@@ -60,7 +63,8 @@ class Response {
      * The data returned by the Travis Encrypter call
      * @return array data
      */
-    public function getKey() {
+    public function getKey()
+    {
         if (isset($this->body['key'])) {
             return $this->body['key'];
         }
@@ -73,7 +77,8 @@ class Response {
      * return the resulting error message
      * @return null|string
      */
-    public function getFile() {
+    public function getFile()
+    {
         if (isset($this->body['file'])) {
             return $this->body['file'];
         }
@@ -85,7 +90,8 @@ class Response {
      * Success getter
      * @return boolean true is return code is 2**
      */
-    public function success() {
+    public function success()
+    {
         return $this->success;
     }
 
@@ -98,7 +104,8 @@ class Response {
      *
      * @return object           Object representing the mailjet response
      */
-    protected function decodeBody($body) {
+    protected function decodeBody($body)
+    {
         if (version_compare(PHP_VERSION, '5.4.0', '>=') && !(defined('JSON_C_VERSION') && PHP_INT_SIZE > 4)) {
             /** In PHP >=5.4.0, json_decode() accepts an options parameter, that allows you
              * to specify that large ints (like Steam Transaction IDs) should be treated as
