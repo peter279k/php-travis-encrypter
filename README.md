@@ -9,7 +9,7 @@ The PHP API wrapper is to encrypt the travis-ci environment variables.
 - Install the php-travis-encrypter via Composer.
 
 ```
-composer require 
+composer require lee/php-travis-encrypter
 ```
 
 - The sample code is as follows.
