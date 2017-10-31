@@ -36,3 +36,10 @@ echo $encrypter->encrypt();
 composer install
 phpunit
 ```
+
+## Contributing
+
+I appreciate the contribution.Here is the tips for contributing project.
+
+- coding style: psr-2 (check coding style via StyleCI)
+- add the some featues should add the mapped unit testing.
