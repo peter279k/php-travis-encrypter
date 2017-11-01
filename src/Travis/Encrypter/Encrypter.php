@@ -40,12 +40,10 @@ class Encrypter
      */
     public function encrypt()
     {
-        //openssl_public_encrypt($this->envName.'='.$this->envValue, $result, $this->key);
         $rsa = new RSA();
         $rsa->loadKey($this->key);
         $rsa->setEncryptionMode(RSA::ENCRYPTION_PKCS1);
         $result = $rsa->encrypt($this->envName.'='.$this->envValue);
-
         return base64_encode($result);
     }
 }

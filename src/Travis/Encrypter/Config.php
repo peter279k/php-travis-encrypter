@@ -14,7 +14,7 @@ namespace Travis\Encrypter;
 
 class Config
 {
-    const WRAPPER_VERSION = 'v1.0.0';
+    const WRAPPER_VERSION = 'v1.0.1';
     const USER_AGENT = 'TravisEncrypter';
     const MAIN_VERSION = 'v1';
     const MAIN_URL = 'api.travis-ci.org';
