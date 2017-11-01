@@ -4,6 +4,9 @@ php:
   - 5.5
   - 5.6
   - 7.0
+env:
+  global:
+    - secure: JGnV6ncrqhjUvFPgUs2AAkO/msSVeJesv7VHzX8/pU4GOZwbmGK9oHuMg6zGAROW8dl9DQlaJs0doIKtRNeIaeMD4e3xzLga5SDw1oTlT6PFHpjetoaI7SIjE4t/qxd9I0QVjfxUcVwwQ9x1NiYxDZi18fYUzk/Jt06l5gcMTGvycimuczaUq9f3qWkl5uX8j+ULZtkXE4srLfAL2UyiqZaZklu9Vhb3MBESMIQ20H8E57gXFXemFcaPDKlIt/TdMZpUaHbNTpuC0UfpyELqdjWpo7YsExGEjfh4LzylJ5k7C0rytjsqytCbJ+xXrHOXD+b2gdtTnZsp2Gx/FcClLhLeAaHDKrw0q7ChW3uM3O668zwwnDcvzNONLyAP7iL+F3X9zXGLL3fb5LJjkaO9fSJ9AV7z8B+HwlChfj5NSLIMCqu22oQdtLOXiQ1qpJLswRHTeDbgoMyqDM16nCEHWMj1+lAg41zEaOCH+E66IDqqDmRNpyy+w0KSg3u0AteJozVJNVrpnHsmXFYMJlIl19atL540zyhIuZbINb9n3bYx/E3wz9iSPHidaCx+xv5AF+ewQB7YV59Uuvn6MPqEVpXNlxpELImWV5/0Y0C2LVVPQHfQqcf9MeOkHOAdAGIJKlNHqInsGmhDaBOSxTn/DZpVMzjdFE+zIll2jb63414=
 install:
   - composer install
 script: phpunit --coverage-clover build/logs/clover.xml
