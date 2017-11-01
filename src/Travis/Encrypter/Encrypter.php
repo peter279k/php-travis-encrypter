@@ -43,7 +43,7 @@ class Encrypter
         //openssl_public_encrypt($this->envName.'='.$this->envValue, $result, $this->key);
         $rsa = new RSA();
         $rsa->loadKey($this->key);
-        $rsa->setEncryptionMode(CRYPT_RSA_ENCRYPTION_PKCS1);
+        $rsa->setEncryptionMode(2);
         $result = $rsa->encrypt($this->envName.'='.$this->envValue);
 
         return base64_encode($result);
