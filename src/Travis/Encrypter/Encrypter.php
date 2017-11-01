@@ -43,7 +43,7 @@ class Encrypter
         //openssl_public_encrypt($this->envName.'='.$this->envValue, $result, $this->key);
         $rsa = new RSA();
         $rsa->loadKey($this->key);
-        $result = $rsa->sign($this->envName.'='.$this->envValue, 2);
+        $result = $rsa->sign($this->envName.'='.$this->envValue);
 
         return base64_encode($result);
     }
