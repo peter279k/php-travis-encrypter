@@ -44,6 +44,7 @@ class Encrypter
         $rsa->loadKey($this->key);
         $rsa->setEncryptionMode(RSA::ENCRYPTION_PKCS1);
         $result = $rsa->encrypt($this->envName.'='.$this->envValue);
+
         return base64_encode($result);
     }
 }

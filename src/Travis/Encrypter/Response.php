@@ -87,6 +87,21 @@ class Response
     }
 
     /**
+     * Error Reason: fingerprint
+     * return the resulting error message
+     * @return null|string
+     */
+
+    public function getFingerPrint()
+    {
+        if (isset($this->body['fingerprint'])) {
+            return $this->body['fingerprint'];
+        }
+
+        return $this->body;
+    }
+
+    /**
      * Success getter
      * @return boolean true is return code is 2**
      */
@@ -121,6 +136,7 @@ class Response
             $jsonWithoutBigIntegers = preg_replace('/:\s*(-?\d{'.$maxIntLength.',})/', ': "$1"', $body);
             $object = json_decode($jsonWithoutBigIntegers, true);
         }
+
         return $object;
     }
 }

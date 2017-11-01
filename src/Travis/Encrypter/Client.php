@@ -22,7 +22,7 @@ class Client
 
     /**
      * Build a new Http Client
-     * @param string $repoName  the specified repository name
+     * @param string  $repoName the specified repository name
      * @param boolean $call     whether the call is to do the HTTP request
      */
     public function __construct($repoName, $call = true)
@@ -38,6 +38,7 @@ class Client
     public function get()
     {
         $result = $this->_call('GET', $this->buildURL(), '', Config::CONTENT_TYPE);
+
         return $result;
     }
 
@@ -47,12 +48,13 @@ class Client
      * @param string $url     call url
      * @param array  $body    Mailjet resource body
      * @param string $type    Request Content-type
-     * @return Response server response
+     * @return       Response server response
      */
     private function _call($method, $url, $body, $type)
     {
         $url = $this->buildURL();
         $request = new Request($method, $url, $body, $type);
+
         return $request->call($this->call);
     }
 
