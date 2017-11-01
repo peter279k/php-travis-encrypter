@@ -19,6 +19,9 @@ composer require lee/php-travis-encrypter
 - The sample code is as follows.
 
 ```php
+use Travis\Encrypter\Client;
+use Travis\Encrypter\Encrypter;
+
 $client = new Client('peter279k/php-travis-encrypter');
 $result = $client->get();
 $key = $result->getKey();
