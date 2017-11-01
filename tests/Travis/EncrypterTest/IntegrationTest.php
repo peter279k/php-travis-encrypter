@@ -13,7 +13,7 @@ class IntegrationTest extends \PHPUnit_Framework_TestCase
         $result = $client->get();
         $key = $result->getKey();
         $encrypter = new Encrypter($key, 'name', 'value');
-        $this->assertSame('value', getenv('name'));
+        $this->assertSame('value', getenv());
         $this->assertInternalType('string', $encrypter->encrypt());
     }
 }
