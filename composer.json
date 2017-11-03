@@ -9,7 +9,7 @@
         "ext-openssl": "*"
     },
     "require-dev": {
-        "phpunit/phpunit": "^4.8",
+        "phpunit/phpunit": "^5.7",
         "php-coveralls/php-coveralls": "^1.0",
         "phpseclib/phpseclib": "~2.0|~1.0",
         "ext-openssl": "*"
