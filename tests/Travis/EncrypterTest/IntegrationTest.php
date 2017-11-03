@@ -2,12 +2,13 @@
 
 namespace Travis\EncrypterTest;
 
+use PHPUnit\Framework\TestCase;
 use Travis\Encrypter\Client;
 use Travis\Encrypter\Encrypter;
 use Travis\Encrypter\Request;
 use Travis\Encrypter\Response;
 
-class IntegrationTest extends \PHPUnit_Framework_TestCase
+class IntegrationTest extends TestCase
 {
     protected $client;
     protected $errorClient;
